@@ -89,8 +89,6 @@ for (let i = 0; i <= data.length - 1; i++) {
   buttonDiv.classList.add(`childDiv${1}`);
   section.appendChild(buttonDiv);
 
-  //checkAnswer('Indian', 0)
-
   //creating the buttons
   for (let j = 0; j <= data[i].choice.length - 1; j++) {
     let choices = document.createElement("button");
@@ -104,6 +102,8 @@ for (let i = 0; i <= data.length - 1; i++) {
     // function checkAnswer(selectedChoice, questionIndex) {
     //   console.log(selectedChoice);
     //   console.log(data[questionIndex].answer);
+
+    //checking for correct answer
     if (data[i].choice[j] == data[i].answer) {
       choices.addEventListener("click", () => {
         choices.setAttribute("style", " background:green");
